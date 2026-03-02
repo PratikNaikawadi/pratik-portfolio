@@ -253,4 +253,16 @@
     .hero-right {
         display: none;
     }
+
+    /* Disable float animation on mobile — prevents scroll jank */
+    .hero-float {
+        animation: none;
+    }
+}
+
+/* Smooth touch scrolling throughout */
+@media (max-width: 768px) {
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
 }
