@@ -19,14 +19,17 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* Must be on html, not body — body with overflow-x:hidden
+                        breaks position:fixed on mobile (containing block bug) */
 }
 
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg);
   color: var(--slate);
-  overflow-x: hidden;
-  /* Prevents bounce/rubber-band scroll from causing layout shifts */
+  width: 100%;
+  /* Never wider than viewport */
   overscroll-behavior: none;
 }
 
