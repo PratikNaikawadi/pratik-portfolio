@@ -1,0 +1,110 @@
+.clients-section {
+    padding: 60px 0 80px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.clients-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 24px;
+}
+
+/* Fade masks on the sides */
+.carousel-outer {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-outer::before,
+.carousel-outer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 160px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.carousel-outer::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg), transparent);
+}
+
+.carousel-outer::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg), transparent);
+}
+
+/* Scrolling track */
+.carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    width: max-content;
+    animation: carouselScroll 30s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes carouselScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% / 3));
+    }
+}
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.06);
+    transition: box-shadow 0.3s, transform 0.3s;
+    flex-shrink: 0;
+}
+
+.carousel-item:hover {
+    box-shadow: 0 8px 32px rgba(79, 70, 229, 0.14);
+    transform: translateY(-4px);
+}
+
+.client-logo {
+    height: 48px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    filter: grayscale(40%) opacity(0.75);
+    transition: filter 0.3s;
+}
+
+.carousel-item:hover .client-logo {
+    filter: grayscale(0%) opacity(1);
+}
+
+@media (max-width: 600px) {
+    .client-logo {
+        height: 36px;
+    }
+
+    .carousel-item {
+        padding: 16px 24px;
+    }
+
+    .carousel-outer::before,
+    .carousel-outer::after {
+        width: 60px;
+    }
+}

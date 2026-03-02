@@ -1,0 +1,131 @@
+.testimonials-section {
+    padding: 100px 24px;
+    background: rgba(79, 70, 229, 0.02);
+}
+
+.testimonials-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonials-header {
+    margin-bottom: 60px;
+}
+
+/* Slider */
+.slider-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.slider-slide {
+    min-width: 100%;
+    padding: 0 4px;
+}
+
+.testimonial-card {
+    border-radius: 28px;
+    padding: 40px;
+}
+
+.stars {
+    color: #f59e0b;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.testimonial-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--slate);
+    line-height: 1.7;
+    margin: 20px 0 28px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #c7d2fe, #e0e7ff);
+    color: var(--indigo);
+    flex-shrink: 0;
+}
+
+.author-name {
+    font-weight: 500;
+    color: var(--slate);
+}
+
+.author-role {
+    font-size: 0.8rem;
+    color: var(--slate-mid);
+}
+
+/* Controls */
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.slider-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--indigo);
+    backdrop-filter: blur(10px);
+    transition: all 0.2s;
+}
+
+.slider-btn:hover {
+    background: var(--indigo);
+    color: white;
+}
+
+.dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(79, 70, 229, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+}
+
+.dot.active {
+    background: var(--indigo);
+    width: 24px;
+}

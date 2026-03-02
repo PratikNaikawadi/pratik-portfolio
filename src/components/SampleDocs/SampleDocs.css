@@ -1,0 +1,113 @@
+.sample-docs-section {
+    padding: 60px 24px 100px;
+}
+
+.sample-docs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sample-docs-header {
+    margin-bottom: 48px;
+}
+
+/* 4 equal columns in one row */
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Clickable card wrapper */
+.doc-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.doc-card {
+    border-radius: 20px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(79, 70, 229, 0.15) !important;
+}
+
+/* BRD / DOC type badge */
+.doc-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    width: fit-content;
+}
+
+.doc-badge--brd {
+    background: rgba(79, 70, 229, 0.12);
+    color: var(--indigo);
+}
+
+.doc-badge--doc {
+    background: rgba(99, 179, 237, 0.15);
+    color: #2b6cb0;
+}
+
+.doc-icon-wrap {
+    width: 48px;
+    height: 48px;
+    background: rgba(79, 70, 229, 0.07);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.doc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--slate);
+    line-height: 1.35;
+}
+
+.doc-subtitle {
+    font-size: 0.78rem;
+    color: var(--slate-mid);
+}
+
+.doc-cta {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--indigo);
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(79, 70, 229, 0.08);
+}
+
+@media (max-width: 900px) {
+    .docs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .docs-grid {
+        grid-template-columns: 1fr;
+    }
+}

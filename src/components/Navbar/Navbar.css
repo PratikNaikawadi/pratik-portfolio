@@ -1,0 +1,118 @@
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(248, 247, 245, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    transition: box-shadow 0.3s;
+}
+
+#navbar.scrolled {
+    box-shadow: 0 4px 30px rgba(79, 70, 229, 0.1);
+}
+
+.navbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+}
+
+.navbar-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--indigo);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+}
+
+.navbar-logo em {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--slate-mid);
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.25s;
+    cursor: pointer;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--indigo);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--indigo);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    color: var(--slate);
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 24px 24px;
+    background: rgba(248, 247, 245, 0.97);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+.mobile-menu .nav-link {
+    font-size: 1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(100, 116, 139, 0.1);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+}
