@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { aboutText, skillTags, person } from '../../data/portfolio';
+import { aboutText, skillTags } from '../../data/portfolio';
 import { SectionHeader } from '../common/SectionHeader';
 import { SkillTag } from '../common/SkillTag';
+import pratikPhoto from '../../assets/pratikprofile.png';
 import './About.css';
 
 const slideIn = (dir, delay = 0) => ({
@@ -34,7 +35,7 @@ export function About() {
                     <motion.div {...slideIn('right', 0.1)} className="about-photo-wrap">
                         <div className="about-photo-frame">
                             <img
-                                src={person.photo}
+                                src={pratikPhoto}
                                 alt="Pratik Naikawadi"
                                 className="about-photo"
                             />
