@@ -35,12 +35,13 @@
 }
 
 .hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.2rem, 7vw, 6.5rem);
-    font-weight: 300;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    font-weight: 800;
     line-height: 1.05;
     color: var(--slate);
     margin-bottom: 8px;
+    letter-spacing: -0.02em;
 }
 
 .hero-title em {
@@ -66,11 +67,12 @@
 
 .cycling-role {
     display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.1rem, 2.5vw, 1.55rem);
-    font-weight: 400;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 500;
+    font-style: italic;
     color: var(--indigo);
-    letter-spacing: 0.04em;
+    letter-spacing: 0;
     position: absolute;
     left: 0;
     line-height: 2.2rem;
@@ -102,14 +104,16 @@
     border-radius: 20px;
     text-align: center;
     min-width: 130px;
+    border: 2px solid #111;
 }
 
 .stat-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 2.4rem;
-    font-weight: 600;
+    font-weight: 800;
     color: var(--indigo);
     line-height: 1;
+    letter-spacing: -0.02em;
 }
 
 .stat-label {
@@ -159,9 +163,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
     color: white;
 }
 

@@ -27,18 +27,19 @@
 }
 
 .navbar-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
     color: var(--indigo);
     text-decoration: none;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.01em;
     cursor: pointer;
 }
 
 .navbar-logo em {
-    font-style: italic;
-    font-weight: 300;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--slate);
 }
 
 .desktop-nav {

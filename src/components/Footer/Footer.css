@@ -18,17 +18,19 @@
 }
 
 .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--indigo);
     text-decoration: none;
     cursor: pointer;
+    letter-spacing: -0.01em;
 }
 
 .footer-logo em {
-    font-weight: 300;
-    font-style: italic;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--slate);
 }
 
 .footer-copy {
