@@ -1,23 +1,20 @@
 #navbar {
-    position: fixed;
+    position: -webkit-sticky;
+    /* iOS Safari */
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
     z-index: 1000;
 
-    /* Solid, always-opaque background — eliminates repaint flicker */
+    /* Solid, always-opaque background */
     background: #f8f7f5;
     border-bottom: 1px solid rgba(100, 116, 139, 0.15);
     box-shadow: 0 2px 12px rgba(79, 70, 229, 0.07);
-
-    /* Promote to own GPU compositing layer */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
 }
 
 #navbar.scrolled {
     box-shadow: 0 4px 20px rgba(79, 70, 229, 0.1);
 }
+
 
 .navbar-inner {
     max-width: 1200px;

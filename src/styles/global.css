@@ -19,9 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  /* Must be on html, not body — body with overflow-x:hidden
-                        breaks position:fixed on mobile (containing block bug) */
+  /* NOTE: overflow-x hidden must NOT be on html — breaks position:sticky */
 }
 
 body {
@@ -29,6 +27,7 @@ body {
   background: var(--bg);
   color: var(--slate);
   width: 100%;
+  overflow-x: hidden;
   /* Never wider than viewport */
   overscroll-behavior: none;
 }
