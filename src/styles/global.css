@@ -66,15 +66,14 @@ body::after {
   animation: orbFloat2 18s ease-in-out infinite;
 }
 
-/* ── Disable all background orb animations on mobile ──────────
-   These fixed-position animated elements constantly repaint and
-   are the primary cause of scroll lag on mobile devices.      */
+/* ── Disable all background orbs on mobile ──────────
+   These fixed-position filter:blur elements create extra GPU layers
+   that interfere with the fixed navbar on iOS/Android. Hide them completely. */
 @media (max-width: 768px) {
 
   body::before,
   body::after {
-    animation: none;
-    will-change: auto;
+    display: none;
   }
 }
 

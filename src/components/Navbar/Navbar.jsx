@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { Menu, X } from 'lucide-react';
 import { person } from '../../data/portfolio';
@@ -7,17 +7,10 @@ import './Navbar.css';
 const navLinks = ['home', 'about', 'resume', 'projects', 'testimonials', 'contact'];
 
 export function Navbar() {
-    const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
-    useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 20);
-        window.addEventListener('scroll', onScroll);
-        return () => window.removeEventListener('scroll', onScroll);
-    }, []);
-
     return (
-        <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
+        <nav id="navbar">
             <div className="navbar-inner">
                 <Link to="home" smooth duration={500} className="navbar-logo">
                     {person.firstName}
